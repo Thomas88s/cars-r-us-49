@@ -2,13 +2,22 @@
     import { Interiors } from "./interiors.js"
     import { Technology } from "./technology.js"
     import { Wheels } from "./wheels.js"
+    import { Orders } from "./orders.js"
+    import { addCustomOrder } from "./database.js"
 
-
+    document.addEventListener(
+        "click",
+        (event) => {
+            if (event.target.id === "orderButton") {
+               addCustomOrder()
+            }
+        }
+    )
 
 
     export const CarsRUs = () => {
         return `
-            <h1>Cars R Us</h1>
+            <h1 class="header">Cars R Us</h1>
             
             <article class="choices">
                 <section class="choices__colors options">
@@ -30,7 +39,12 @@
             </article>
             
             <article>
-                <button id="orderButton">Place Your Order</button>
+                <button id="orderButton" class="button">Place Your Order</button>
+            </article>    
+
+            <article class="customOrders">
+                <h2>Custom Car Orders</h2>
+                ${Orders()}    
             </article>
             
             `

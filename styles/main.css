@@ -1,0 +1,74 @@
+
+
+body,
+input,
+select,
+textarea {
+	color: #050505;
+	font-family: "Comfortaa", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+
+body {
+    background-image: url("https://t4.ftcdn.net/jpg/03/34/04/51/240_F_334045166_aHAcbCJYfzl8DrWLL2V6qTuIzMgvBx8c.jpg");
+}
+.choices {
+    display: flex;
+    margin-bottom: 5em;
+  }
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Patua One", serif;
+  letter-spacing: 2px;
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0.25rem;
+}
+
+.options, .customOrders {
+    flex-basis: 24%;
+    margin: 0 2rem;
+    border: 1px solid rgb(172, 3, 3);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem black;
+    background-color: orangered;
+}
+.header {
+    
+    flex: 33%;
+    margin: 0 2rem;
+    border: 1px solid rgb(172, 3, 3);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem black;
+    background-color: orangered; 
+}
+
+.button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(172, 3, 3);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px black;
+    margin-bottom: 4em;
+    margin-left: 1em;
+  }
+  
+  .button:hover {background-color: #f72003}
+  
+  .button:active {
+    background-image: url("https://t4.ftcdn.net/jpg/03/34/04/51/240_F_334045166_aHAcbCJYfzl8DrWLL2V6qTuIzMgvBx8c.jpg");
+    /* background-color:  rgb(172, 3, 3); */
+    box-shadow: 0 5px black;
+    transform: translateY(4px);
+  }
