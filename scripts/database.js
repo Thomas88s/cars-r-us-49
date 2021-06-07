@@ -8,28 +8,28 @@
             wheelsId: 1
         },
 
-        colors = [
+        colors: [
             {id: 1, name: "Silver", price: 1250},
             {id: 2, name: "Midnight Blue", price: 1150},
             {id: 3, name: "Firebrick Red", price: 1150},
             {id: 4, name: "Spring Green", price: 1100},
         ],
 
-        interiors = [
+        interiors: [
             {id: 1, type: "Beige Fabric", price: 800},
             {id: 2, type: "Charcoal Fabric", price: 800},
             {id: 3, type: "White Leather", price: 1200},
             {id: 4, type: "Black Leather", price: 1200},
         ],
         
-        technology = [
+        technology: [
             {id: 1, package: "Basic Package (basic sound system)", price: 700},
             {id: 2, package: "Navigation Package (includes integrated navigation controls)", price: 1000},
             {id: 3, package: "Visibility Package (includes side and rear cameras)", price: 1000},
             {id: 4, package: "Ultra Package (includes navigation and visibility packages)", price: 1900},
         ],
         
-        wheels = [
+        wheels: [
             {id: 1, description: "17-inch Pair Radial", price: 1000},
             {id: 2, description: "17-inch Pair Radial Black", price: 1000},
             {id: 3, description: "18-inch Pair Spoke Silver", price: 1200},
@@ -62,7 +62,7 @@
     }
 
     export const getWheels = () => {
-        return database.interiors.map(wheel => ({...wheel}))
+        return database.wheels.map(wheel => ({...wheel}))
     } 
 
     export const getOrders = () => {
