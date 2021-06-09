@@ -1,5 +1,5 @@
 
-    import { getOrders, getColors, getInteriors, getTechnology, getWheels } from "./database.js"
+    import { getOrders, getColors, getInteriors, getTechnology, getWheels, getModels } from "./database.js"
     
 
     // const orders = getOrders()
@@ -7,6 +7,7 @@
     const interiors = getInteriors()
     const technology = getTechnology()
     const wheels = getWheels()
+    const models = getModels()
     const order = getOrders()
     
     
@@ -33,12 +34,31 @@
                 return wheel.id === order.wheelsId               
             }   
         )
+        const foundModel = models.find(
+            (model) => {
+                return model.id === order.modelId               
+            }   
+        )
+
+        let subtotal = foundColor.price + foundInterior.price + foundTechnology.price + foundWheels.price
+        
                         
-        const totalCost = foundColor.price + foundInterior.price + foundTechnology.price + foundWheels.price
+    const totalCost = () => {         
+            if (foundModel.id === 2) {
+                subtotal = subtotal * 1.5;
+            } else if (foundModel.id === 3) {
+                subtotal = subtotal * 2.25
+            } else if (foundModel.id === 4) {
+                subtotal = subtotal * 3   
+            } else {
+                subtotal = subtotal   
+            }
+            return subtotal
+    }
                         
-       
+    const finalCost = totalCost() 
                         
-        const costString = totalCost.toLocaleString("en-US", {
+        const costString = finalCost.toLocaleString("en-US", {
             style: "currency",
             currency: "USD"
         })

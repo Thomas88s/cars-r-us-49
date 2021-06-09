@@ -5,7 +5,8 @@
             colorId: 1,
             interiorId: 1,
             technologyId: 1,
-            wheelsId: 1
+            wheelsId: 1,
+            modelId: 1
         },
 
         colors: [
@@ -35,6 +36,13 @@
             {id: 3, description: "18-inch Pair Spoke Silver", price: 1200},
             {id: 4, description: "18-inch Pair Spoke Black", price: 1200},
         ],
+
+        models: [
+            {id:1, type: "Sedan"},
+            {id:2, type: "SUV"},
+            {id:3, type: "Truck"},
+            {id:4, type: "Sport"}
+        ],
         
         customOrders: [ 
             {
@@ -43,6 +51,7 @@
             interiorId: 1,
             technologyId: 1,
             wheelsId: 1,
+            modelId: 1,
             timestamp: 1341123414190
             }
         ]    
@@ -64,6 +73,11 @@
     export const getWheels = () => {
         return database.wheels.map(wheel => ({...wheel}))
     } 
+    
+    export const getModels = () => {
+        return database.models.map(model => ({...model}))
+    } 
+    
 
     export const getOrders = () => {
         return database.customOrders.map(order => ({...order}))
@@ -83,6 +97,9 @@
 
     export const setWheels = (id) => {
         database.orderBuilder.wheelsId = id
+    }
+    export const setModel = (id) => {
+        database.orderBuilder.modelId = id
     }
 
     export const addCustomOrder = () => {

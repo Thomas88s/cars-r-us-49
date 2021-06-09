@@ -20,7 +20,7 @@
 
         for (const color of colors) {
             html += `<li>
-                <input type="radio" name="color" value="${color.id}" /> ${color.    name}
+                <input type="radio" name="color" value="${color.id}" /> ${color.name}
             </li>`
         }
 
