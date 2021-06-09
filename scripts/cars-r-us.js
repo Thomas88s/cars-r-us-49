@@ -2,6 +2,7 @@
     import { Interiors } from "./interiors.js"
     import { Technology } from "./technology.js"
     import { Wheels } from "./wheels.js"
+    import { Models } from "./models.js"
     import { Orders } from "./orders.js"
     import { addCustomOrder } from "./database.js"
 
@@ -37,7 +38,9 @@
                     ${Wheels()}
                 </section>
             </article>
-            
+            <article class="modelSelector">
+                ${Models()}
+            </article>
             <article>
                 <button id="orderButton" class="button">Place Your Order</button>
             </article>    
